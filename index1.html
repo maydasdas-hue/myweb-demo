@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>ANON SPORTS - ยกระดับศักยภาพของคุณ</title>
+    <meta name="description" content="ANON SPORTS ผู้นำด้านอุปกรณ์กีฬาและฟิตเนสระดับพรีเมียม เพื่อผลลัพธ์ที่ดีที่สุดของคุณ">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+Thai:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0b0e;
+            --surface-color: #16161c;
+            --primary-color: #ff3e00;
+            --primary-glow: rgba(255, 62, 0, 0.4);
+            --text-main: #ffffff;
+            --text-muted: #8b8b99;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', 'Noto Sans Thai', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            background: rgba(11, 11, 14, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-main);
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px var(--primary-glow);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px var(--primary-color);
+            background: #ff5522;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-main);
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            padding-top: 80px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: var(--primary-color);
+            filter: blur(150px);
+            opacity: 0.15;
+            z-index: -1;
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 62, 0, 0.1);
+            color: var(--primary-color);
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 62, 0, 0.2);
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #fff, #aaa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-item h4 {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 0.2rem;
+        }
+
+        .stat-item p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-image img {
+            max-width: 130%;
+            height: auto;
+            transform: scale(1.2) rotate(-15deg);
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: scale(1.2) rotate(-15deg) translateY(0px); }
+            50% { transform: scale(1.2) rotate(-15deg) translateY(-20px); }
+            100% { transform: scale(1.2) rotate(-15deg) translateY(0px); }
+        }
+
+        .circle-bg {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, transparent, rgba(255, 62, 0, 0.2));
+            border: 1px solid rgba(255, 62, 0, 0.3);
+            z-index: -1;
+            animation: pulse 4s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.5; }
+            100% { transform: scale(1.05); opacity: 0.8; }
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 5%;
+            background: var(--surface-color);
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--bg-color);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-color: rgba(255, 62, 0, 0.2);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 62, 0, 0.1);
+            color: var(--primary-color);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Banner Section */
+        .cta-banner {
+            margin: 6rem 5%;
+            padding: 4rem;
+            background: linear-gradient(135deg, rgba(255, 62, 0, 0.2) 0%, rgba(22, 22, 28, 1) 100%);
+            border-radius: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 62, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-banner h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-banner p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-color);
+            padding: 4rem 5% 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-col p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul a:hover {
+            color: var(--primary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--surface-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-main);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 120px;
+            }
+            .hero-content {
+                margin-bottom: 4rem;
+            }
+            .hero-actions, .hero-stats {
+                justify-content: center;
+            }
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 3rem; }
+            .nav-links { display: none; }
+            .footer-content { grid-template-columns: 1fr; gap: 2rem; }
+            .cta-banner { padding: 3rem 2rem; }
+            .cta-banner h2 { font-size: 2rem; }
+        }
+
+        /* Products Section */
+        .products {
+            padding: 6rem 5%;
+            background: var(--bg-color);
+            position: relative;
+        }
+        .products::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: var(--primary-color);
+            filter: blur(150px);
+            opacity: 0.1;
+            z-index: 0;
+            border-radius: 50%;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+        .product-card {
+            background: var(--surface-color);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(255, 62, 0, 0.15);
+        }
+        .product-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.5s ease;
+        }
+        .product-card:hover .product-img {
+            transform: scale(1.05);
+        }
+        .product-img-wrapper {
+            overflow: hidden;
+        }
+        .product-info {
+            padding: 1.5rem;
+        }
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .product-price {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .btn-add-cart {
+            width: 100%;
+            padding: 0.8rem;
+            background: rgba(255, 62, 0, 0.1);
+            color: var(--primary-color);
+            border: 1px solid rgba(255, 62, 0, 0.2);
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-add-cart:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .modal.show {
+            display: flex;
+            opacity: 1;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .modal-content {
+            background: #000;
+            padding: 0;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+            position: relative;
+            box-shadow: 0 0 30px rgba(255, 62, 0, 0.3);
+            border: 1px solid rgba(255, 62, 0, 0.2);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+        .modal.show .modal-content {
+            transform: scale(1);
+        }
+        .close-modal {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: #fff;
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: color 0.3s;
+            line-height: 1;
+        }
+        .close-modal:hover {
+            color: var(--primary-color);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">
+            <i class="fa-solid fa-bolt"></i> ANON<span>SPORTS</span>
+        </a>
+        <div class="nav-links">
+            <a href="#home">หน้าแรก</a>
+            <a href="#shop">สินค้ามาใหม่</a>
+            <a href="#table-tennis">เทเบิลเทนนิส</a>
+            <a href="#features">คุณสมบัติ</a>
+            <a href="#about">เกี่ยวกับเรา</a>
+        </div>
+        <a href="#shop" class="btn-primary">เลือกซื้อเลย</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">🚀 คอลเลกชันใหม่ 2026</div>
+            <h1 class="hero-title">ทะยานสู่ขีดสุด<br>ของศักยภาพคุณ</h1>
+            <p class="hero-desc">ค้นพบอุปกรณ์กีฬาและฟิตเนสระดับพรีเมียมที่ออกแบบมาเพื่อเพิ่มประสิทธิภาพในการออกกำลังกายของคุณ ผสานเทคโนโลยีล้ำสมัยเข้ากับดีไซน์ที่โฉบเฉี่ยว</p>
+            <div class="hero-actions">
+                <a href="#shop" class="btn-primary">เริ่มต้นช้อปปิ้ง <i class="fa-solid fa-arrow-right ml-2"></i></a>
+                <button onclick="openVideoModal()" class="btn-outline" style="cursor: pointer;"><i class="fa-solid fa-play"></i> ชมวิดีโอ</button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h4>50k+</h4>
+                    <p>ลูกค้าที่ไว้วางใจ</p>
+                </div>
+                <div class="stat-item">
+                    <h4>200+</h4>
+                    <p>สินค้าระดับโปร</p>
+                </div>
+                <div class="stat-item">
+                    <h4>4.9/5</h4>
+                    <p>รีวิวความพึงพอใจ</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="circle-bg"></div>
+            <!-- ใช้รูปภาพรองเท้ากีฬาที่สร้างขึ้นมา -->
+            <img src="file:///C:/Users/Computer_SSKRU/.gemini/antigravity-ide/brain/1b9cc4ba-f408-4944-8f1a-9b7849f3a61f/hero_sports_shoes_1781489389953.png" alt="Premium Sports Shoes">
+        </div>
+    </section>
+
+    <section class="products" id="shop">
+        <div class="section-header">
+            <h2>สินค้ามาใหม่ล่าสุด</h2>
+            <p>อัปเกรดการออกกำลังกายของคุณด้วยอุปกรณ์คอลเลกชันใหม่ล่าสุดจากเรา</p>
+        </div>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Running Shoes" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">ANON Speed 2.0</h3>
+                    <div class="product-price">฿4,590</div>
+                    <button class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1554260570-e9689a3418b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Sports Top" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">ANON Flex T-Shirt</h3>
+                    <div class="product-price">฿1,290</div>
+                    <button class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dumbbells" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Premium Dumbbell Set</h3>
+                    <div class="product-price">฿2,490</div>
+                    <button class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Running Shoes Red" class="product-img">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">ANON X-Pro Red</h3>
+                    <div class="product-price">฿5,190</div>
+                    <button class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table Tennis Equipment Section -->
+    <section class="products" id="table-tennis" style="padding-top: 2rem;">
+        <div class="section-header">
+            <h2>อุปกรณ์เทเบิลเทนนิส (Ping Pong Pro-Shop)</h2>
+            <p>รวมไม้ปิงปอง ยางปิงปอง ลูกปิงปอง และอุปกรณ์เสริมระดับเวิลด์คลาสครบวงจร</p>
+        </div>
+        <div class="product-grid">
+            <!-- Blades -->
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?w=600&h=400&fit=crop" alt="Butterfly Viscaria ALC" class="product-img" style="object-fit: cover;">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Butterfly Viscaria ALC</h3>
+                    <div class="product-price">฿5,500</div>
+                    <button class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?w=600&h=400&fit=crop" alt="Stiga Cybershape" class="product-img" style="object-fit: cover;">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Stiga Cybershape Carbon</h3>
+                    <div class="product-price">฿6,200</div>
+                    <button class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?w=600&h=400&fit=crop" alt="Nittaku Acoustic" class="product-img" style="object-fit: cover;">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Nittaku Acoustic</h3>
+                    <div class="product-price">฿4,900</div>
+                    <button class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?w=600&h=400&fit=crop" alt="DHS Hurricane Long 5" class="product-img" style="object-fit: cover;">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">DHS Hurricane Long 5</h3>
+                    <div class="product-price">฿6,500</div>
+                    <button class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+
+            <!-- Rubbers -->
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=600&h=400&fit=crop" alt="Tenergy 05" class="product-img" style="object-fit: cover;">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Butterfly Tenergy 05</h3>
+                    <div class="product-price">฿2,400</div>
+                    <button class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=600&h=400&fit=crop" alt="Hurricane 3 Neo" class="product-img" style="object-fit: cover;">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">DHS Hurricane 3 Neo</h3>
+                    <div class="product-price">฿850</div>
+                    <button class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=600&h=400&fit=crop" alt="Rakza Z" class="product-img" style="object-fit: cover;">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Yasaka Rakza Z</h3>
+                    <div class="product-price">฿1,500</div>
+                    <button class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=600&h=400&fit=crop" alt="Evolution MX-P" class="product-img" style="object-fit: cover;">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Tibhar Evolution MX-P</h3>
+                    <div class="product-price">฿1,650</div>
+                    <button class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+
+            <!-- Balls -->
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="file:///C:/Users/Computer_SSKRU/.gemini/antigravity-ide/brain/1b9cc4ba-f408-4944-8f1a-9b7849f3a61f/tt_balls_1781491845977.png" alt="Nittaku Premium" class="product-img" style="object-fit: cover;">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Nittaku Premium 3-Star (3 ลูก)</h3>
+                    <div class="product-price">฿300</div>
+                    <button class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="file:///C:/Users/Computer_SSKRU/.gemini/antigravity-ide/brain/1b9cc4ba-f408-4944-8f1a-9b7849f3a61f/tt_balls_1781491845977.png" alt="Butterfly R40+" class="product-img" style="object-fit: cover;">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Butterfly R40+ 3-Star (3 ลูก)</h3>
+                    <div class="product-price">฿280</div>
+                    <button class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="file:///C:/Users/Computer_SSKRU/.gemini/antigravity-ide/brain/1b9cc4ba-f408-4944-8f1a-9b7849f3a61f/tt_balls_1781491845977.png" alt="DHS DJ40+" class="product-img" style="object-fit: cover;">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">DHS DJ40+ 3-Star (6 ลูก)</h3>
+                    <div class="product-price">฿450</div>
+                    <button class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="file:///C:/Users/Computer_SSKRU/.gemini/antigravity-ide/brain/1b9cc4ba-f408-4944-8f1a-9b7849f3a61f/tt_balls_1781491845977.png" alt="Xiom Seamless" class="product-img" style="object-fit: cover;">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Xiom Seamless 3-Star (3 ลูก)</h3>
+                    <div class="product-price">฿250</div>
+                    <button class="btn-add-cart"><i class="fa-solid fa-cart-shopping"></i> เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="section-header">
+            <h2>ทำไมต้องเลือก ANON SPORTS</h2>
+            <p>เรามุ่งมั่นพัฒนาอุปกรณ์กีฬาที่ไม่เพียงแค่สวยงาม แต่ยังต้องตอบโจทย์การใช้งานจริงสำหรับนักกีฬาทุกระดับ</p>
+        </div>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-microchip"></i></div>
+                <h3>เทคโนโลยีล้ำสมัย</h3>
+                <p>ใช้วัสดุและเทคโนโลยีการผลิตล่าสุด เพื่อความทนทาน น้ำหนักเบา และระบายอากาศได้ดีเยี่ยม</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-medal"></i></div>
+                <h3>คุณภาพระดับพรีเมียม</h3>
+                <p>ผ่านการทดสอบคุณภาพอย่างเข้มงวด มั่นใจได้ในประสิทธิภาพที่คงทนยาวนาน</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
+                <h3>เป็นมิตรต่อสิ่งแวดล้อม</h3>
+                <p>กระบวนการผลิตและวัสดุที่เราเลือกใช้ คำนึงถึงความยั่งยืนและการลดผลกระทบต่อโลก</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <h2>พร้อมที่จะยกระดับการออกกำลังกายของคุณหรือยัง?</h2>
+        <p>สมัครสมาชิกวันนี้ รับส่วนลด 15% สำหรับการสั่งซื้อครั้งแรก พร้อมสิทธิพิเศษอีกมากมาย</p>
+        <a href="#register" class="btn-primary" style="display: inline-block; padding: 1rem 3rem; font-size: 1.1rem;">รับสิทธิ์ทันที</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <a href="#" class="logo" style="margin-bottom: 1.5rem; display: inline-block;">
+                    <i class="fa-solid fa-bolt"></i> ANON<span>SPORTS</span>
+                </a>
+                <p>มอบประสบการณ์การออกกำลังกายที่ดีที่สุดให้กับคุณ ด้วยอุปกรณ์ที่ได้มาตรฐานระดับสากล</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>หมวดหมู่สินค้า</h4>
+                <ul>
+                    <li><a href="#">รองเท้าวิ่ง</a></li>
+                    <li><a href="#">ชุดออกกำลังกาย</a></li>
+                    <li><a href="#">อุปกรณ์ฟิตเนส</a></li>
+                    <li><a href="#">แก็ดเจ็ตกีฬา</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>ช่วยเหลือ</h4>
+                <ul>
+                    <li><a href="#">การจัดส่งสินค้า</a></li>
+                    <li><a href="#">การคืนสินค้า</a></li>
+                    <li><a href="#">คำถามที่พบบ่อย</a></li>
+                    <li><a href="#">ติดต่อเรา</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>ติดต่อเรา</h4>
+                <ul>
+                    <li><i class="fa-solid fa-envelope" style="color: var(--primary-color); margin-right: 10px;"></i> support@anonsports.com</li>
+                    <li><i class="fa-solid fa-phone" style="color: var(--primary-color); margin-right: 10px;"></i> 02-123-4567</li>
+                    <li><i class="fa-solid fa-location-dot" style="color: var(--primary-color); margin-right: 10px;"></i> กรุงเทพมหานคร, ประเทศไทย</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ANON SPORTS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeVideoModal()">&times;</span>
+            <div class="video-container">
+                <iframe id="videoIframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('videoModal');
+        const iframe = document.getElementById('videoIframe');
+        // YouTube video link with autoplay
+        const videoUrl = "https://www.youtube.com/embed/jZfE5-V1d8g?autoplay=1";
+
+        function openVideoModal() {
+            modal.classList.add('show');
+            iframe.src = videoUrl;
+        }
+
+        function closeVideoModal() {
+            modal.classList.remove('show');
+            iframe.src = ""; // Stop the video
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeVideoModal();
+            }
+        }
+    </script>
+</body>
+</html>
