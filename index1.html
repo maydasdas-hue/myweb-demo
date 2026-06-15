@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
     <title>ANON SPORTS - ยกระดับศักยภาพของคุณ</title>
-    <meta name="description" content="ANON SPORTS ผู้นำด้านอุปกรณ์กีฬาและฟิตเนสระดับพรีเมียม เพื่อผลลัพธ์ที่ดีที่สุดของคุณ">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+Thai:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="ANON SPORTS ผู้นำด้านอุปกรณ์กีฬาและฟิตเนสระดับพรีเมียม เพื่อผลลัพธ์ที่ดีที่สุดของคุณ">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+Thai:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
@@ -121,6 +125,23 @@
             padding: 0 5%;
             padding-top: 80px;
             position: relative;
+            background-image: url('file:///C:/Users/Computer_SSKRU/.gemini/antigravity-ide/brain/1b9cc4ba-f408-4944-8f1a-9b7849f3a61f/sports_bg_hero_1781492513303.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(11, 11, 14, 0.82) 0%, rgba(11, 11, 14, 0.55) 60%, rgba(11, 11, 14, 0.85) 100%);
+            z-index: 0;
+        }
+
+        .hero>* {
+            position: relative;
+            z-index: 1;
         }
 
         .hero::before {
@@ -132,8 +153,8 @@
             height: 500px;
             background: var(--primary-color);
             filter: blur(150px);
-            opacity: 0.15;
-            z-index: -1;
+            opacity: 0.12;
+            z-index: 0;
             border-radius: 50%;
         }
 
@@ -210,14 +231,22 @@
             max-width: 130%;
             height: auto;
             transform: scale(1.2) rotate(-15deg);
-            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
             animation: float 6s ease-in-out infinite;
         }
 
         @keyframes float {
-            0% { transform: scale(1.2) rotate(-15deg) translateY(0px); }
-            50% { transform: scale(1.2) rotate(-15deg) translateY(-20px); }
-            100% { transform: scale(1.2) rotate(-15deg) translateY(0px); }
+            0% {
+                transform: scale(1.2) rotate(-15deg) translateY(0px);
+            }
+
+            50% {
+                transform: scale(1.2) rotate(-15deg) translateY(-20px);
+            }
+
+            100% {
+                transform: scale(1.2) rotate(-15deg) translateY(0px);
+            }
         }
 
         .circle-bg {
@@ -232,8 +261,15 @@
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); opacity: 0.5; }
-            100% { transform: scale(1.05); opacity: 0.8; }
+            0% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
         }
 
         /* Features Section */
@@ -289,7 +325,7 @@
 
         .feature-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             border-color: rgba(255, 62, 0, 0.2);
         }
 
@@ -326,6 +362,10 @@
             margin: 6rem 5%;
             padding: 4rem;
             background: linear-gradient(135deg, rgba(255, 62, 0, 0.2) 0%, rgba(22, 22, 28, 1) 100%);
+            background-image: url('file:///C:/Users/Computer_SSKRU/.gemini/antigravity-ide/brain/1b9cc4ba-f408-4944-8f1a-9b7849f3a61f/sports_bg_products_1781492550483.png');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
             border-radius: 30px;
             text-align: center;
             border: 1px solid rgba(255, 62, 0, 0.3);
@@ -429,23 +469,42 @@
                 text-align: center;
                 padding-top: 120px;
             }
+
             .hero-content {
                 margin-bottom: 4rem;
             }
-            .hero-actions, .hero-stats {
+
+            .hero-actions,
+            .hero-stats {
                 justify-content: center;
             }
+
             .footer-content {
                 grid-template-columns: 1fr 1fr;
             }
         }
 
         @media (max-width: 768px) {
-            .hero-title { font-size: 3rem; }
-            .nav-links { display: none; }
-            .footer-content { grid-template-columns: 1fr; gap: 2rem; }
-            .cta-banner { padding: 3rem 2rem; }
-            .cta-banner h2 { font-size: 2rem; }
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .cta-banner {
+                padding: 3rem 2rem;
+            }
+
+            .cta-banner h2 {
+                font-size: 2rem;
+            }
         }
 
         /* Products Section */
@@ -454,6 +513,7 @@
             background: var(--bg-color);
             position: relative;
         }
+
         .products::before {
             content: '';
             position: absolute;
@@ -467,6 +527,7 @@
             z-index: 0;
             border-radius: 50%;
         }
+
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -475,6 +536,7 @@
             position: relative;
             z-index: 1;
         }
+
         .product-card {
             background: var(--surface-color);
             border-radius: 20px;
@@ -482,11 +544,13 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.4s ease;
         }
+
         .product-card:hover {
             transform: translateY(-10px);
             border-color: var(--primary-color);
             box-shadow: 0 10px 30px rgba(255, 62, 0, 0.15);
         }
+
         .product-img {
             width: 100%;
             height: 250px;
@@ -494,25 +558,31 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             transition: transform 0.5s ease;
         }
+
         .product-card:hover .product-img {
             transform: scale(1.05);
         }
+
         .product-img-wrapper {
             overflow: hidden;
         }
+
         .product-info {
             padding: 1.5rem;
         }
+
         .product-title {
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
         }
+
         .product-price {
             color: var(--primary-color);
             font-size: 1.3rem;
             font-weight: 700;
             margin-bottom: 1rem;
         }
+
         .btn-add-cart {
             width: 100%;
             padding: 0.8rem;
@@ -524,6 +594,7 @@
             cursor: pointer;
             transition: all 0.3s;
         }
+
         .btn-add-cart:hover {
             background: var(--primary-color);
             color: white;
@@ -545,15 +616,23 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
+
         .modal.show {
             display: flex;
             opacity: 1;
             animation: fadeIn 0.3s ease;
         }
+
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
+
         .modal-content {
             background: #000;
             padding: 0;
@@ -566,9 +645,11 @@
             transform: scale(0.9);
             transition: transform 0.3s ease;
         }
+
         .modal.show .modal-content {
             transform: scale(1);
         }
+
         .close-modal {
             position: absolute;
             top: -40px;
@@ -579,16 +660,20 @@
             transition: color 0.3s;
             line-height: 1;
         }
+
         .close-modal:hover {
             color: var(--primary-color);
         }
+
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
+            padding-bottom: 56.25%;
+            /* 16:9 */
             height: 0;
             border-radius: 15px;
             overflow: hidden;
         }
+
         .video-container iframe {
             position: absolute;
             top: 0;
@@ -596,8 +681,393 @@
             width: 100%;
             height: 100%;
         }
+
+        /* ===== CART SYSTEM ===== */
+        .cart-icon-btn {
+            position: relative;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            font-size: 1.4rem;
+            cursor: pointer;
+            padding: 0.4rem 0.6rem;
+            transition: color 0.3s;
+        }
+
+        .cart-icon-btn:hover {
+            color: var(--primary-color);
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            background: var(--primary-color);
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.3s;
+        }
+
+        .cart-badge.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Cart Overlay */
+        .cart-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        .cart-overlay.open {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        /* Cart Sidebar */
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -420px;
+            width: 420px;
+            max-width: 95vw;
+            height: 100vh;
+            background: var(--surface-color);
+            border-left: 1px solid rgba(255, 255, 255, 0.08);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .cart-sidebar.open {
+            right: 0;
+        }
+
+        .cart-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .cart-header h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cart-close {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            cursor: pointer;
+            line-height: 1;
+            transition: color 0.3s;
+        }
+
+        .cart-close:hover {
+            color: var(--primary-color);
+        }
+
+        .cart-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .cart-empty {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-muted);
+        }
+
+        .cart-empty i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.4;
+            display: block;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 12px;
+            padding: 0.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .cart-item-img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 8px;
+            background: #222;
+        }
+
+        .cart-item-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .cart-item-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .cart-item-price {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .cart-item-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .qty-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: none;
+            color: #fff;
+            width: 26px;
+            height: 26px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        .qty-btn:hover {
+            background: var(--primary-color);
+        }
+
+        .qty-val {
+            font-size: 0.9rem;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        .remove-btn {
+            background: none;
+            border: none;
+            color: #555;
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 0.2rem;
+            transition: color 0.2s;
+        }
+
+        .remove-btn:hover {
+            color: #ff4444;
+        }
+
+        .cart-footer {
+            padding: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .cart-total strong {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+        }
+
+        .btn-checkout {
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 0 20px var(--primary-glow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-checkout:hover {
+            background: #ff5522;
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px var(--primary-color);
+        }
+
+        .btn-checkout:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Order Success Modal */
+        .order-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        .order-modal.show {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .order-box {
+            background: var(--surface-color);
+            border-radius: 20px;
+            padding: 3rem 2.5rem;
+            text-align: center;
+            max-width: 440px;
+            width: 90%;
+            border: 1px solid rgba(255, 62, 0, 0.3);
+            box-shadow: 0 0 60px rgba(255, 62, 0, 0.2);
+            transform: scale(0.8);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .order-modal.show .order-box {
+            transform: scale(1);
+        }
+
+        .order-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: bounce 0.6s ease 0.3s both;
+        }
+
+        @keyframes bounce {
+            from {
+                transform: scale(0);
+            }
+
+            60% {
+                transform: scale(1.2);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .order-box h2 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .order-box p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .order-number {
+            background: rgba(255, 62, 0, 0.1);
+            border: 1px solid rgba(255, 62, 0, 0.3);
+            border-radius: 10px;
+            padding: 0.8rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .order-number strong {
+            color: var(--primary-color);
+            display: block;
+            font-size: 1.1rem;
+            margin-top: 0.3rem;
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #1e1e2e;
+            border: 1px solid rgba(255, 62, 0, 0.4);
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            z-index: 3000;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .toast i {
+            color: var(--primary-color);
+        }
     </style>
 </head>
+
 <body>
 
     <nav>
@@ -611,17 +1081,26 @@
             <a href="#features">คุณสมบัติ</a>
             <a href="#about">เกี่ยวกับเรา</a>
         </div>
-        <a href="#shop" class="btn-primary">เลือกซื้อเลย</a>
+        <div style="display:flex; align-items:center; gap:1rem;">
+            <a href="#shop" class="btn-primary">เลือกซื้อเลย</a>
+            <button class="cart-icon-btn" onclick="toggleCart()" title="ตะกร้าสินค้า">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-badge" id="cartBadge">0</span>
+            </button>
+        </div>
     </nav>
 
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-badge">🚀 คอลเลกชันใหม่ 2026</div>
             <h1 class="hero-title">ทะยานสู่ขีดสุด<br>ของศักยภาพคุณ</h1>
-            <p class="hero-desc">ค้นพบอุปกรณ์กีฬาและฟิตเนสระดับพรีเมียมที่ออกแบบมาเพื่อเพิ่มประสิทธิภาพในการออกกำลังกายของคุณ ผสานเทคโนโลยีล้ำสมัยเข้ากับดีไซน์ที่โฉบเฉี่ยว</p>
+            <p class="hero-desc">
+                ค้นพบอุปกรณ์กีฬาและฟิตเนสระดับพรีเมียมที่ออกแบบมาเพื่อเพิ่มประสิทธิภาพในการออกกำลังกายของคุณ
+                ผสานเทคโนโลยีล้ำสมัยเข้ากับดีไซน์ที่โฉบเฉี่ยว</p>
             <div class="hero-actions">
                 <a href="#shop" class="btn-primary">เริ่มต้นช้อปปิ้ง <i class="fa-solid fa-arrow-right ml-2"></i></a>
-                <button onclick="openVideoModal()" class="btn-outline" style="cursor: pointer;"><i class="fa-solid fa-play"></i> ชมวิดีโอ</button>
+                <button onclick="openVideoModal()" class="btn-outline" style="cursor: pointer;"><i
+                        class="fa-solid fa-play"></i> ชมวิดีโอ</button>
             </div>
             <div class="hero-stats">
                 <div class="stat-item">
@@ -641,11 +1120,13 @@
         <div class="hero-image">
             <div class="circle-bg"></div>
             <!-- ใช้รูปภาพรองเท้ากีฬาที่สร้างขึ้นมา -->
-            <img src="file:///C:/Users/Computer_SSKRU/.gemini/antigravity-ide/brain/1b9cc4ba-f408-4944-8f1a-9b7849f3a61f/hero_sports_shoes_1781489389953.png" alt="Premium Sports Shoes">
+            <img src="file:///C:/Users/Computer_SSKRU/.gemini/antigravity-ide/brain/1b9cc4ba-f408-4944-8f1a-9b7849f3a61f/hero_sports_shoes_1781489389953.png"
+                alt="Premium Sports Shoes">
         </div>
     </section>
 
-    <section class="products" id="shop">
+    <section class="products" id="shop"
+        style="background-image: url('file:///C:/Users/Computer_SSKRU/.gemini/antigravity-ide/brain/1b9cc4ba-f408-4944-8f1a-9b7849f3a61f/sports_bg_products_1781492550483.png'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(11,11,14,0.9);">
         <div class="section-header">
             <h2>สินค้ามาใหม่ล่าสุด</h2>
             <p>อัปเกรดการออกกำลังกายของคุณด้วยอุปกรณ์คอลเลกชันใหม่ล่าสุดจากเรา</p>
@@ -654,7 +1135,8 @@
             <!-- Product 1 -->
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Running Shoes" class="product-img">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Running Shoes" class="product-img">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">ANON Speed 2.0</h3>
@@ -665,7 +1147,8 @@
             <!-- Product 2 -->
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1554260570-e9689a3418b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Sports Top" class="product-img">
+                    <img src="https://images.unsplash.com/photo-1554260570-e9689a3418b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Sports Top" class="product-img">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">ANON Flex T-Shirt</h3>
@@ -676,7 +1159,8 @@
             <!-- Product 3 -->
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dumbbells" class="product-img">
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Dumbbells" class="product-img">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Premium Dumbbell Set</h3>
@@ -687,7 +1171,8 @@
             <!-- Product 4 -->
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Running Shoes Red" class="product-img">
+                    <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Running Shoes Red" class="product-img">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">ANON X-Pro Red</h3>
@@ -699,7 +1184,8 @@
     </section>
 
     <!-- Table Tennis Equipment Section -->
-    <section class="products" id="table-tennis" style="padding-top: 2rem;">
+    <section class="products" id="table-tennis"
+        style="padding-top: 2rem; background-image: url('file:///C:/Users/Computer_SSKRU/.gemini/antigravity-ide/brain/1b9cc4ba-f408-4944-8f1a-9b7849f3a61f/sports_bg_hero_1781492513303.png'); background-size: cover; background-position: center; background-blend-mode: luminosity; background-color: rgba(11,11,14,0.92);">
         <div class="section-header">
             <h2>อุปกรณ์เทเบิลเทนนิส (Ping Pong Pro-Shop)</h2>
             <p>รวมไม้ปิงปอง ยางปิงปอง ลูกปิงปอง และอุปกรณ์เสริมระดับเวิลด์คลาสครบวงจร</p>
@@ -708,7 +1194,8 @@
             <!-- Blades -->
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?w=600&h=400&fit=crop" alt="Butterfly Viscaria ALC" class="product-img" style="object-fit: cover;">
+                    <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?w=600&h=400&fit=crop"
+                        alt="Butterfly Viscaria ALC" class="product-img" style="object-fit: cover;">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Butterfly Viscaria ALC</h3>
@@ -718,7 +1205,8 @@
             </div>
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?w=600&h=400&fit=crop" alt="Stiga Cybershape" class="product-img" style="object-fit: cover;">
+                    <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?w=600&h=400&fit=crop"
+                        alt="Stiga Cybershape" class="product-img" style="object-fit: cover;">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Stiga Cybershape Carbon</h3>
@@ -728,7 +1216,8 @@
             </div>
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?w=600&h=400&fit=crop" alt="Nittaku Acoustic" class="product-img" style="object-fit: cover;">
+                    <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?w=600&h=400&fit=crop"
+                        alt="Nittaku Acoustic" class="product-img" style="object-fit: cover;">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Nittaku Acoustic</h3>
@@ -738,7 +1227,8 @@
             </div>
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?w=600&h=400&fit=crop" alt="DHS Hurricane Long 5" class="product-img" style="object-fit: cover;">
+                    <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?w=600&h=400&fit=crop"
+                        alt="DHS Hurricane Long 5" class="product-img" style="object-fit: cover;">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">DHS Hurricane Long 5</h3>
@@ -750,7 +1240,8 @@
             <!-- Rubbers -->
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=600&h=400&fit=crop" alt="Tenergy 05" class="product-img" style="object-fit: cover;">
+                    <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=600&h=400&fit=crop"
+                        alt="Tenergy 05" class="product-img" style="object-fit: cover;">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Butterfly Tenergy 05</h3>
@@ -760,7 +1251,8 @@
             </div>
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=600&h=400&fit=crop" alt="Hurricane 3 Neo" class="product-img" style="object-fit: cover;">
+                    <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=600&h=400&fit=crop"
+                        alt="Hurricane 3 Neo" class="product-img" style="object-fit: cover;">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">DHS Hurricane 3 Neo</h3>
@@ -770,7 +1262,8 @@
             </div>
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=600&h=400&fit=crop" alt="Rakza Z" class="product-img" style="object-fit: cover;">
+                    <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=600&h=400&fit=crop"
+                        alt="Rakza Z" class="product-img" style="object-fit: cover;">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Yasaka Rakza Z</h3>
@@ -780,7 +1273,8 @@
             </div>
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=600&h=400&fit=crop" alt="Evolution MX-P" class="product-img" style="object-fit: cover;">
+                    <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=600&h=400&fit=crop"
+                        alt="Evolution MX-P" class="product-img" style="object-fit: cover;">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Tibhar Evolution MX-P</h3>
@@ -792,7 +1286,8 @@
             <!-- Balls -->
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="file:///C:/Users/Computer_SSKRU/.gemini/antigravity-ide/brain/1b9cc4ba-f408-4944-8f1a-9b7849f3a61f/tt_balls_1781491845977.png" alt="Nittaku Premium" class="product-img" style="object-fit: cover;">
+                    <img src="file:///C:/Users/Computer_SSKRU/.gemini/antigravity-ide/brain/1b9cc4ba-f408-4944-8f1a-9b7849f3a61f/tt_balls_1781491845977.png"
+                        alt="Nittaku Premium" class="product-img" style="object-fit: cover;">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Nittaku Premium 3-Star (3 ลูก)</h3>
@@ -802,7 +1297,8 @@
             </div>
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="file:///C:/Users/Computer_SSKRU/.gemini/antigravity-ide/brain/1b9cc4ba-f408-4944-8f1a-9b7849f3a61f/tt_balls_1781491845977.png" alt="Butterfly R40+" class="product-img" style="object-fit: cover;">
+                    <img src="file:///C:/Users/Computer_SSKRU/.gemini/antigravity-ide/brain/1b9cc4ba-f408-4944-8f1a-9b7849f3a61f/tt_balls_1781491845977.png"
+                        alt="Butterfly R40+" class="product-img" style="object-fit: cover;">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Butterfly R40+ 3-Star (3 ลูก)</h3>
@@ -812,7 +1308,8 @@
             </div>
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="file:///C:/Users/Computer_SSKRU/.gemini/antigravity-ide/brain/1b9cc4ba-f408-4944-8f1a-9b7849f3a61f/tt_balls_1781491845977.png" alt="DHS DJ40+" class="product-img" style="object-fit: cover;">
+                    <img src="file:///C:/Users/Computer_SSKRU/.gemini/antigravity-ide/brain/1b9cc4ba-f408-4944-8f1a-9b7849f3a61f/tt_balls_1781491845977.png"
+                        alt="DHS DJ40+" class="product-img" style="object-fit: cover;">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">DHS DJ40+ 3-Star (6 ลูก)</h3>
@@ -822,7 +1319,8 @@
             </div>
             <div class="product-card">
                 <div class="product-img-wrapper">
-                    <img src="file:///C:/Users/Computer_SSKRU/.gemini/antigravity-ide/brain/1b9cc4ba-f408-4944-8f1a-9b7849f3a61f/tt_balls_1781491845977.png" alt="Xiom Seamless" class="product-img" style="object-fit: cover;">
+                    <img src="file:///C:/Users/Computer_SSKRU/.gemini/antigravity-ide/brain/1b9cc4ba-f408-4944-8f1a-9b7849f3a61f/tt_balls_1781491845977.png"
+                        alt="Xiom Seamless" class="product-img" style="object-fit: cover;">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Xiom Seamless 3-Star (3 ลูก)</h3>
@@ -861,7 +1359,8 @@
     <section class="cta-banner">
         <h2>พร้อมที่จะยกระดับการออกกำลังกายของคุณหรือยัง?</h2>
         <p>สมัครสมาชิกวันนี้ รับส่วนลด 15% สำหรับการสั่งซื้อครั้งแรก พร้อมสิทธิพิเศษอีกมากมาย</p>
-        <a href="#register" class="btn-primary" style="display: inline-block; padding: 1rem 3rem; font-size: 1.1rem;">รับสิทธิ์ทันที</a>
+        <a href="#register" class="btn-primary"
+            style="display: inline-block; padding: 1rem 3rem; font-size: 1.1rem;">รับสิทธิ์ทันที</a>
     </section>
 
     <footer>
@@ -899,9 +1398,12 @@
             <div class="footer-col">
                 <h4>ติดต่อเรา</h4>
                 <ul>
-                    <li><i class="fa-solid fa-envelope" style="color: var(--primary-color); margin-right: 10px;"></i> support@anonsports.com</li>
-                    <li><i class="fa-solid fa-phone" style="color: var(--primary-color); margin-right: 10px;"></i> 02-123-4567</li>
-                    <li><i class="fa-solid fa-location-dot" style="color: var(--primary-color); margin-right: 10px;"></i> กรุงเทพมหานคร, ประเทศไทย</li>
+                    <li><i class="fa-solid fa-envelope" style="color: var(--primary-color); margin-right: 10px;"></i>
+                        support@anonsports.com</li>
+                    <li><i class="fa-solid fa-phone" style="color: var(--primary-color); margin-right: 10px;"></i>
+                        02-123-4567</li>
+                    <li><i class="fa-solid fa-location-dot"
+                            style="color: var(--primary-color); margin-right: 10px;"></i> กรุงเทพมหานคร, ประเทศไทย</li>
                 </ul>
             </div>
         </div>
@@ -915,33 +1417,191 @@
         <div class="modal-content">
             <span class="close-modal" onclick="closeVideoModal()">&times;</span>
             <div class="video-container">
-                <iframe id="videoIframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="videoIframe" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
         </div>
     </div>
 
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-cart-shopping" style="color:var(--primary-color)"></i> ตะกร้าสินค้า</h3>
+            <button class="cart-close" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-body" id="cartBody">
+            <div class="cart-empty" id="cartEmpty">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p>ตะกร้าของคุณว่างเปล่า</p>
+                <p style="font-size:0.8rem;margin-top:0.3rem">เพิ่มสินค้าที่คุณชื่นชอบได้เลย!</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>ยอดรวม</span>
+                <strong id="cartTotal">฿0</strong>
+            </div>
+            <button class="btn-checkout" id="checkoutBtn" onclick="checkout()" disabled>
+                <i class="fa-solid fa-bag-shopping"></i> สั่งซื้อเลย
+            </button>
+        </div>
+    </div>
+
+    <!-- Order Success Modal -->
+    <div class="order-modal" id="orderModal">
+        <div class="order-box">
+            <div class="order-icon">🎉</div>
+            <h2>สั่งซื้อสำเร็จ!</h2>
+            <p>ขอบคุณที่ไว้วางใจ ANON SPORTS<br>เราจะจัดส่งสินค้าให้คุณโดยเร็วที่สุด</p>
+            <div class="order-number">
+                หมายเลขคำสั่งซื้อ
+                <strong id="orderNum">#AS-000000</strong>
+            </div>
+            <button class="btn-primary" onclick="closeOrder()" style="width:100%; padding:0.9rem; font-size:1rem;">
+                <i class="fa-solid fa-check"></i> ตกลง
+            </button>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"><i class="fa-solid fa-circle-check"></i> <span
+            id="toastMsg">เพิ่มสินค้าลงตะกร้าแล้ว!</span></div>
+
     <script>
+        // ===== VIDEO MODAL =====
         const modal = document.getElementById('videoModal');
         const iframe = document.getElementById('videoIframe');
-        // YouTube video link with autoplay
-        const videoUrl = "https://www.youtube.com/embed/jZfE5-V1d8g?autoplay=1";
+        const videoUrl = "https://www.youtube.com/embed/LMxVKwPMQtQ?autoplay=1";
+        function openVideoModal() { modal.classList.add('show'); iframe.src = videoUrl; }
+        function closeVideoModal() { modal.classList.remove('show'); iframe.src = ""; }
+        window.onclick = function (event) { if (event.target == modal) closeVideoModal(); }
 
-        function openVideoModal() {
-            modal.classList.add('show');
-            iframe.src = videoUrl;
+        // ===== CART SYSTEM =====
+        let cart = [];
+
+        function toggleCart() {
+            document.getElementById('cartSidebar').classList.toggle('open');
+            document.getElementById('cartOverlay').classList.toggle('open');
         }
 
-        function closeVideoModal() {
-            modal.classList.remove('show');
-            iframe.src = ""; // Stop the video
-        }
-
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                closeVideoModal();
+        function addToCart(name, price, imgSrc) {
+            const existing = cart.find(i => i.name === name);
+            if (existing) {
+                existing.qty++;
+            } else {
+                cart.push({ name, price, imgSrc, qty: 1 });
             }
+            renderCart();
+            showToast('เพิ่ม "' + name + '" ลงตะกร้าแล้ว!');
+        }
+
+        function removeFromCart(name) {
+            cart = cart.filter(i => i.name !== name);
+            renderCart();
+        }
+
+        function changeQty(name, delta) {
+            const item = cart.find(i => i.name === name);
+            if (!item) return;
+            item.qty += delta;
+            if (item.qty <= 0) cart = cart.filter(i => i.name !== name);
+            renderCart();
+        }
+
+        function renderCart() {
+            const body = document.getElementById('cartBody');
+            const empty = document.getElementById('cartEmpty');
+            const badge = document.getElementById('cartBadge');
+            const totalEl = document.getElementById('cartTotal');
+            const checkoutBtn = document.getElementById('checkoutBtn');
+
+            const totalQty = cart.reduce((s, i) => s + i.qty, 0);
+            const totalPrice = cart.reduce((s, i) => s + i.price * i.qty, 0);
+
+            badge.textContent = totalQty;
+            badge.classList.toggle('visible', totalQty > 0);
+            totalEl.textContent = '฿' + totalPrice.toLocaleString();
+            checkoutBtn.disabled = cart.length === 0;
+
+            // Clear items (keep empty state element)
+            Array.from(body.children).forEach(el => { if (!el.id) el.remove(); });
+
+            if (cart.length === 0) {
+                empty.style.display = 'block';
+                return;
+            }
+            empty.style.display = 'none';
+
+            cart.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'cart-item';
+                div.innerHTML = `
+                    <img src="${item.imgSrc}" class="cart-item-img" alt="${item.name}">
+                    <div class="cart-item-info">
+                        <div class="cart-item-name">${item.name}</div>
+                        <div class="cart-item-price">฿${(item.price * item.qty).toLocaleString()}</div>
+                    </div>
+                    <div class="cart-item-controls">
+                        <button class="qty-btn" onclick="changeQty('${item.name.replace(/'/g, "\\'")}',-1)">−</button>
+                        <span class="qty-val">${item.qty}</span>
+                        <button class="qty-btn" onclick="changeQty('${item.name.replace(/'/g, "\\'")}'1)">+</button>
+                        <button class="remove-btn" onclick="removeFromCart('${item.name.replace(/'/g, "\\'")}')" title="ลบ"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>`;
+                body.appendChild(div);
+            });
+        }
+
+        function checkout() {
+            const num = 'AS-' + Math.floor(100000 + Math.random() * 900000);
+            document.getElementById('orderNum').textContent = '#' + num;
+            document.getElementById('orderModal').classList.add('show');
+            // Close cart sidebar
+            document.getElementById('cartSidebar').classList.remove('open');
+            document.getElementById('cartOverlay').classList.remove('open');
+        }
+
+        function closeOrder() {
+            document.getElementById('orderModal').classList.remove('show');
+            cart = [];
+            renderCart();
+        }
+
+        // Bind all add-to-cart buttons
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.btn-add-cart').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const card = this.closest('.product-card');
+                    const name = card.querySelector('.product-title').textContent;
+                    const priceText = card.querySelector('.product-price').textContent.replace(/[฿,]/g, '');
+                    const price = parseInt(priceText);
+                    const img = card.querySelector('.product-img');
+                    const imgSrc = img ? img.src : '';
+                    addToCart(name, price, imgSrc);
+
+                    // Button feedback animation
+                    this.textContent = '✓ เพิ่มแล้ว!';
+                    this.style.background = '#22c55e';
+                    setTimeout(() => {
+                        this.innerHTML = '<i class="fa-solid fa-cart-shopping"></i> เพิ่มลงตะกร้า';
+                        this.style.background = '';
+                    }, 1000);
+                });
+            });
+        });
+
+        let toastTimer;
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').textContent = msg;
+            toast.classList.add('show');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => toast.classList.remove('show'), 2500);
         }
     </script>
 </body>
+
 </html>
